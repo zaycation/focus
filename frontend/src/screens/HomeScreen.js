@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Row, Col, Button } from "react-bootstrap";
-import Post from "../components/Post";
-import axios from "axios";
+import { Link } from "react-router-dom";
 import Typing from "react-typing-animation";
+import axios from "axios";
+
+import Post from "../components/Post";
+
 import "../css/HomeScreen.css";
 
 const AnimatedTypingComponent = () => (
@@ -37,14 +40,23 @@ const HomeScreen = () => {
             <br />
             <AnimatedTypingComponent />
             <br />
+            <h6 className="heading__text">
+              Focus is a Los Angeles based non-profit organization geared
+              towards helping educate minorities and our youth on financial
+              literacy
+            </h6>
             <br />
             <div className="center__btns">
-              <Button size="lg" variant="dark">
-                Free Financial Literacy Course
-              </Button>{" "}
-              <Button size="lg" variant="dark">
-                Try Budgeting Today (100% Free!)
-              </Button>
+              <Link to="/free-course">
+                <Button size="lg" variant="dark">
+                  Free Financial Literacy Course
+                </Button>{" "}
+              </Link>
+              <Link to="/app">
+                <Button size="lg" variant="dark">
+                  Try Budgeting Today (100% Free!)
+                </Button>
+              </Link>
             </div>
           </Col>
         </Row>
