@@ -17,3 +17,10 @@ Focus is the all-you-need budgeting app to help take control of your expenses an
 - Bootstrap
   - React-Bootstrap
 - Font Awesome
+
+## How to Contribute
+
+1. [Fork this github repository](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo)
+2. [Clone the forked repository to your local device](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+   > git clone <link to your forked repo here>
+3. Run "npm run dev" in your terminal in the root directory of the project folder. This will run both the frontend and backend via concurrently and nodemon.

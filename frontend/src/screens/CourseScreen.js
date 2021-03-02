@@ -3,6 +3,14 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 
 import Welcome from "../components/course/Welcome";
 import WhatIsIt from "../components/course/WhatIsIt";
+import Budgeting from "../components/course/Budgeting";
+import Credit from "../components/course/Credit";
+import Debt from "../components/course/Debt";
+import Saving from "../components/course/Saving";
+import Emergencies from "../components/course/Emergencies";
+import Investing from "../components/course/Investing";
+import Stocks from "../components/course/Stocks";
+import Tips from "../components/course/Tips";
 
 import "../css/CourseScreen.css";
 
@@ -14,7 +22,6 @@ const CourseScreen = () => {
       <Container fluid={true} className="container-fluid">
         <Row>
           <Col sm={12} md={3} className="left__col">
-            <div className="row__order">
               <Button
                 variant="link"
                 onClick={() => {
@@ -29,12 +36,12 @@ const CourseScreen = () => {
                   setSection("whatisit");
                 }}
               >
-                What even is "financial literacy"?
+                What is "financial literacy"?
               </Button>
               <Button
                 variant="link"
                 onClick={() => {
-                  setSection("welcome");
+                  setSection("budgeting");
                 }}
               >
                 Budgeting 101
@@ -42,7 +49,7 @@ const CourseScreen = () => {
               <Button
                 variant="link"
                 onClick={() => {
-                  setSection("welcome");
+                  setSection("credit");
                 }}
               >
                 Credit 101
@@ -50,7 +57,7 @@ const CourseScreen = () => {
               <Button
                 variant="link"
                 onClick={() => {
-                  setSection("welcome");
+                  setSection("debt");
                 }}
               >
                 Debt
@@ -59,7 +66,7 @@ const CourseScreen = () => {
               <Button
                 variant="link"
                 onClick={() => {
-                  setSection("welcome");
+                  setSection("saving");
                 }}
               >
                 Saving
@@ -67,7 +74,7 @@ const CourseScreen = () => {
               <Button
                 variant="link"
                 onClick={() => {
-                  setSection("welcome");
+                  setSection("emergencies");
                 }}
               >
                 Emergencies
@@ -75,7 +82,7 @@ const CourseScreen = () => {
               <Button
                 variant="link"
                 onClick={() => {
-                  setSection("welcome");
+                  setSection("investing");
                 }}
               >
                 Investing 101
@@ -83,7 +90,7 @@ const CourseScreen = () => {
               <Button
                 variant="link"
                 onClick={() => {
-                  setSection("welcome");
+                  setSection("stocks");
                 }}
               >
                 Stocks and Cryptos
@@ -91,16 +98,25 @@ const CourseScreen = () => {
               <Button
                 variant="link"
                 onClick={() => {
-                  setSection("welcome");
+                  setSection("tips");
                 }}
               >
                 Useful Tips!
               </Button>
-            </div>
+
           </Col>
           <Col sm={12} md={9}>
+            Login to track your course progress!
             {section === "welcome" && <Welcome />}
             {section === "whatisit" && <WhatIsIt />}
+            {section === "budgeting" && <Budgeting />}
+            {section === "credit" && <Credit />}
+            {section === "debt" && <Debt />}
+            {section === "saving" && <Saving />}
+            {section === "emergencies" && <Emergencies />}
+            {section === "investing" && <Investing />}
+            {section === "stocks" && <Stocks />}
+            {section === "tips" && <Tips />}
           </Col>
         </Row>
       </Container>
