@@ -1,0 +1,10 @@
+.left__col {
+  border-right: 3.5px solid teal;
+}
+
+.row__order {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}

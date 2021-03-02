@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACT,YAAY,EAAE,gBAAgB;CAC/B;;AAED,AAAA,WAAW,CAAC;EACV,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,UAAU;EACvB,eAAe,EAAE,MAAM;CACxB",
+    "sources": [
+        "CourseScreen.scss"
+    ],
+    "names": [],
+    "file": "CourseScreen.css"
+}
