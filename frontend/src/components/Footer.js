@@ -6,9 +6,9 @@ import "../css/Footer.css";
 const Footer = () => {
   return (
     <footer>
-      <Container fluid={true} className="container-fluid">
+      <Container fluid={true} className="container-fluid footer__bg">
         <Row>
-          <Col className="text-center py-3 footer__bg">
+          <Col className="text-center py-3">
             Copyright &copy; Focus Budgeting 2021
           </Col>
         </Row>

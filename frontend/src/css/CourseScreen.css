@@ -1,6 +1,6 @@
 .left__col {
   border-right: 3.5px solid teal;
-  height: 82.5vh;
+  height: 85vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,5 +15,9 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+.course__bg {
+  height: 85vh;
 }
 /*# sourceMappingURL=CourseScreen.css.map */

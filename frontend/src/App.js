@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 //Components
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 
 //Screens
 import HomeScreen from "./screens/HomeScreen";
@@ -23,10 +22,9 @@ const App = () => {
           <Route path="/" component={HomeScreen} exact />
           <Route path="/posts/:id" component={PostsScreen} />
           <Route path="/app" component={AppScreen} exact />
-          <Route path="/free-course" component={CourseScreen} exact />
+          <Route path="/course" component={CourseScreen} exact />
         </Container>
       </main>
-      <Footer />
     </Router>
   );
 };

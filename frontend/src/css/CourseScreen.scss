@@ -1,9 +1,13 @@
 .left__col {
   border-right: 3.5px solid teal;
-  height: 82.5vh;
+  height: 85vh;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
+}
+
+.course__bg {
+  height: 85vh;
 }

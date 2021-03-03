@@ -47,7 +47,7 @@ const HomeScreen = () => {
             </h6>
             <br />
             <div className="center__btns">
-              <Link to="/free-course">
+              <Link to="/course">
                 <Button size="lg" variant="dark">
                   Free Financial Literacy Course
                 </Button>{" "}
