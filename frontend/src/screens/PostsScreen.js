@@ -25,21 +25,21 @@ const PostsScreen = ({ blogPost }) => {
       </Link>
       <Row>
         <Col md={6}>
-          <Image src={posts.image} alt={blogPost.name} fluid />
+          <Image src={posts.image} alt={posts.title} fluid />
         </Col>
         <Col md={3}>
           <ListGroup variant="flush">
             <ListGroup.Item>
-              <h3>{blogPost.name}</h3>
+              <h3>{posts.title}</h3>
             </ListGroup.Item>
             <ListGroup.Item>
               <Rating
-                value={blogPost.rating}
-                text={`${blogPost.numReviews} reviews`}
+                value={posts.rating}
+                text={`${posts.numReviews} reviews`}
               />
             </ListGroup.Item>
-            <ListGroup.Item>Price: ${blogPost.price}</ListGroup.Item>
-            <ListGroup.Item>Description: {blogPost.description}</ListGroup.Item>
+            <ListGroup.Item>Price: ${posts.price}</ListGroup.Item>
+            <ListGroup.Item>Description: {posts.description}</ListGroup.Item>
           </ListGroup>
         </Col>
         <Col md={3}>
@@ -50,7 +50,7 @@ const PostsScreen = ({ blogPost }) => {
                 <Row>
                   <Col>Price:</Col>
                   <Col>
-                    <strong>${blogPost.price}</strong>
+                    <strong>${posts.price}</strong>
                   </Col>
                 </Row>
               </ListGroup.Item>
@@ -58,7 +58,7 @@ const PostsScreen = ({ blogPost }) => {
                 <Row>
                   <Col>Status:</Col>
                   <Col>
-                    {blogPost.countInStock > 0 ? "In Stock" : "Out Of Stock"}
+                    {posts.countInStock > 0 ? "In Stock" : "Out Of Stock"}
                   </Col>
                 </Row>
               </ListGroup.Item>
@@ -66,7 +66,7 @@ const PostsScreen = ({ blogPost }) => {
                 <Button
                   className="btn-block"
                   type="button"
-                  disabled={blogPost.countInStock === 0}
+                  disabled={posts.countInStock === 0}
                 >
                   Add to cart <i className="fas fa-shopping-cart" />
                 </Button>

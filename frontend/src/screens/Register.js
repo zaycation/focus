@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
+import { Row, Col, Button, Form } from "react-bootstrap";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../actions/authActions";
@@ -48,17 +49,98 @@ class Register extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col s8 offset-s2">
-            <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-              <h4>
-                <b>Register</b> below
-              </h4>
-              <p className="grey-text text-darken-1">
-                Already have an account? <Link to="/login">Log in</Link>
-              </p>
-            </div>
+      <Row>
+        <Col>
+          <div className="px-3">
+            <h4>
+              <b>Register</b> below
+            </h4>
+            <p className="grey-text text-darken-1">
+              Already have an account? <Link to="/login">Log in</Link>
+            </p>
+
+            <Form noValidate onSubmit={this.onSubmit}>
+              <Form.Group controlId="formBasicName">
+                <Form.Label>Name</Form.Label>
+                <Form.Control
+                  onChange={this.onChange}
+                  value={this.state.name}
+                  error={errors.name}
+                  id="name"
+                  type="text"
+                  placeholder="Enter full name"
+                  className={classnames("", {
+                    invalid: errors.name,
+                  })}
+                />
+                <span className="red-text">{errors.name}</span>
+              </Form.Group>
+
+              <Form.Group controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control
+                  onChange={this.onChange}
+                  value={this.state.email}
+                  error={errors.email}
+                  id="email"
+                  type="email"
+                  placeholder="Enter email"
+                  className={classnames("", {
+                    invalid: errors.email,
+                  })}
+                />
+                <Form.Text className="text-muted">
+                  We'll never share your email with anyone else.
+                </Form.Text>
+                <span className="red-text">{errors.email}</span>
+              </Form.Group>
+
+              <Form.Group controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  onChange={this.onChange}
+                  value={this.state.password}
+                  error={errors.password}
+                  id="password"
+                  type="password"
+                  className={classnames("", {
+                    invalid: errors.password || errors.passwordincorrect,
+                  })}
+                  placeholder="Password"
+                />
+                <span className="red-text">
+                  {errors.password}
+                  {errors.passwordincorrect}
+                </span>
+              </Form.Group>
+
+              <Form.Group controlId="formBasicPassword2">
+                <Form.Label>Confirm Password</Form.Label>
+                <Form.Control
+                  onChange={this.onChange}
+                  value={this.state.password2}
+                  error={errors.password2}
+                  id="password2"
+                  type="password"
+                  className={classnames("", {
+                    invalid: errors.password2,
+                  })}
+                  placeholder="Confirm above password"
+                />
+                <span className="red-text">{errors.password2}</span>
+              </Form.Group>
+              {/*
+              <Form.Group controlId="formBasicCheckbox">
+              <Form.Check type="checkbox" label="Check me out" />
+              </Form.Group>
+            */}
+              <Button variant="primary" type="submit">
+                Submit
+              </Button>
+            </Form>
+
+            {/*
+              
             <form noValidate onSubmit={this.onSubmit}>
               <div className="input-field col s12">
                 <input
@@ -131,9 +213,10 @@ class Register extends Component {
                 </button>
               </div>
             </form>
+            */}
           </div>
-        </div>
-      </div>
+        </Col>
+      </Row>
     );
   }
 }
