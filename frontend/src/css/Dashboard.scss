@@ -1,0 +1,11 @@
+.card__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.edit__title {
+  color: #fd7e14 !important;
+  font-weight: 600;
+}

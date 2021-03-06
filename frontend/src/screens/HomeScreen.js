@@ -52,7 +52,7 @@ const HomeScreen = () => {
                   Free Financial Literacy Course
                 </Button>{" "}
               </Link>
-              <Link to="/app">
+              <Link to="/signup">
                 <Button size="lg" variant="dark">
                   Try Budgeting Today (100% Free!)
                 </Button>

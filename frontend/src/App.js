@@ -11,6 +11,8 @@ import store from "./store";
 import Header from "./components/Header";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
+import Income from "./components/dashboard/Income";
+import Expenses from "./components/dashboard/Expenses";
 
 //Screens
 import HomeScreen from "./screens/HomeScreen";
@@ -57,6 +59,8 @@ const App = () => {
             <Route path="/signup" component={Register} exact />
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              <PrivateRoute exact path="/income" component={Income} />
+              <PrivateRoute exact path="/expenses" component={Expenses} />
             </Switch>
           </Container>
         </main>

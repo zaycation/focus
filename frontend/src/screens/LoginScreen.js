@@ -5,14 +5,14 @@ import { Row, Col, Form, Button } from "react-bootstrap";
 const LoginScreen = (props) => {
   const { value: email, bind: bindEmail, reset: resetEmail } = useInput("");
   const {
-    value: password,
+    //value: password,
     bind: bindPassword,
     reset: resetPassword,
   } = useInput("");
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    alert(`Logging in ${email} ${password}`);
+    alert(`Logging in ${email}`);
     resetEmail();
     resetPassword();
     //console.log(`Logging in ${email} ${password}`);

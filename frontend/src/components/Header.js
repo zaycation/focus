@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header>
       <Navbar bg="dark" variant="dark" expand="lg">
-      <Container fluid={true} className="container-fluid">
+        <Container fluid={true} className="container-fluid">
           <LinkContainer to="/">
             <Navbar.Brand>FOCUS</Navbar.Brand>
           </LinkContainer>
@@ -26,7 +26,7 @@ const Header = () => {
               </LinkContainer>
 
               <LinkContainer to="/login">
-                <Nav.Link>
+                <Nav.Link id="navlink">
                   <i className="far fa-user" /> Log In
                 </Nav.Link>
               </LinkContainer>
